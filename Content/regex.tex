@@ -1,0 +1,38 @@
+\section{RegEx}
+\subsection*{}
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{|l|X|}
+\hline
+\textbf{Quantor} & \textbf{Description} \\ \hline
+\texttt{?} & none or exactly one occurrence of the preceding character \\ \hline
+\texttt{*} & zero or more repetitions \\ \hline
+\texttt{+} & One or more repetitions \\ \hline
+\texttt{\{n,m\}} & Between n and m repetitions \\ \hline
+\texttt{\{n\}} & Exactly n repetitions \\ \hline
+\end{tabularx}
+\caption{Quantors in Regular Expressions}
+\label{tab:quantors}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\linewidth}{|X|L|X|}
+\hline
+\textbf{Expression} & \textbf{Examples of Matches} & \textbf{Description} \\ \hline
+\texttt{[abc]} & 'a', 'b', 'c' & one character: a, b, or c \\ \hline
+\texttt{(ab|cd)} & 'ab' or 'cd' & \textbar{} denotes "or" of character strings \\ \hline
+\texttt{[a-z]} & 'a', 'b', ..., 'z' & lowercase letter - be careful with umlauts! \\ \hline
+\texttt{[a-zäöüß]} & 'a', 'z', 'ö', 'ü' & Lowercase letter including umlauts \\ \hline
+\texttt{[A-Za-z]*} & 'hello', 'why', 'aaBBcc', '' & Zero or more repetitions of upper or lower case letters \\ \hline
+\texttt{[0-9]+} & '1', '2434', '76553' & one or more repetitions of digits \\ \hline
+\texttt{[0-9]?}   & '', '0', '5' & none or one digit \\ \hline
+\texttt{[0-9]\{4\}} & '3415', '5423' & four-digit sequence of digits \\ \hline
+\texttt{.*} & '', 'so that', 'hello123' & Any character string (may also be empty) \\ \hline
+\texttt{I .+ [Ll]ove} & 'I absolutely Love', 'I secretly love' & 'I', any non-empty sequence of characters, 'Love' or 'love' \\ \hline
+\texttt{D[\^{}o]g} & 'Dig', but not 'Dog' & [\^{}o] stands for "not o" \\ \hline
+\end{tabularx}
+\caption{Examples of Regular Expressions}
+\label{tab:regex-examples}
+\end{table}
+
